@@ -11,48 +11,57 @@ class Program
         int grade = int.Parse(userScore);
         
         
-        
+        string letter = "";
 
         if (grade >= 90)
         {
-             string textGrade = grade.ToString();
-             textGrade = "A";
-             Console.WriteLine($"You got a {textGrade}");
-             Console.WriteLine($"Congrats you passed!");
+             
+             letter = "A";
+             Console.WriteLine($"You got a {letter}");
+             
              
         }
         else if (grade >= 80)
         {
-            string textGrade = grade.ToString();
-            textGrade = "B";
-            Console.WriteLine($"You got a {textGrade}");
-            Console.WriteLine($"Congrats you passed!");
+            
+            letter = "B";
+            Console.WriteLine($"You got a {letter}");
+            
         }
         else if (grade >= 70)
         {
-            string textGrade = grade.ToString();
-            textGrade = "C";
-            Console.WriteLine($"You got a {textGrade}");
-            Console.WriteLine($"Congrats you passed!");
+            
+            letter = "C";
+            Console.WriteLine($"You got a {letter}");
+            
 
         }
         else if (grade >= 60)
         {
-        string textGrade = grade.ToString();
-        textGrade = "D";
-        Console.WriteLine($"You got a {textGrade}");
-        Console.WriteLine($"Sorry you did not pass.");
+        
+        letter = "D";
+        Console.WriteLine($"You got a {letter}");
+        
 
         }
         else 
         {
-           string textGrade = grade.ToString();
-           textGrade = "F";
-           Console.WriteLine($"You got a {textGrade}");
-           Console.WriteLine($"Sorry you did not pass."); 
+           
+           letter = "F";
+           Console.WriteLine($"You got a {letter}");
+            
 
         }
 
+        if (grade >= 70)
+        {
+            Console.Write("Congradulations you have recieved a passing score!");
+        }
+
+        else 
+        {
+            Console.Write("We are sorry to inform you that you did not recieve a passing grade. Better luck next year.");
+        }
         
     }
 }
