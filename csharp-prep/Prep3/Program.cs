@@ -15,16 +15,16 @@ class Program
 
        while (userGuess != number)
        {
-        Console.Write("What is your guess?");
+        Console.Write("Guess a number between 1 and 100." );
         userGuess = int.Parse(Console.ReadLine());
 
         if (userGuess < number)
         {
-            Console.WriteLine($"higher");
+            Console.WriteLine($"Guess higher");
         }
         else if (userGuess > number)
         {
-            Console.WriteLine($"Lower");
+            Console.WriteLine($"Guess lower");
         }
         else
         {
