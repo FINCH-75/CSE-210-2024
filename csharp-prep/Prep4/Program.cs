@@ -7,9 +7,7 @@ class Program
     
     static void Main(string[] args)
     {
-        //Console.WriteLine("Hello Prep4 World!");
-
-        //List<int> numbers = new List<int>();
+       
         
         List<int> numbers = new List<int>();
 
@@ -29,10 +27,7 @@ class Program
         
 
         }
-        //foreach (int num in numbers)
-        //{
-           // Console.WriteLine(num);
-        //}
+       
 
         int sum = 0;
 
