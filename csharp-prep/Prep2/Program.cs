@@ -1,67 +1,91 @@
 using System;
-using System.Runtime.CompilerServices;
 
 class Program
 {
     static void Main(string[] args)
     {
         Console.WriteLine("Hello Prep2 World!");
-        Console.Write("What is your final score?");
-        string userScore = Console.ReadLine();
-        int grade = int.Parse(userScore);
-        
-        
+
+        Console.Write("What grade percentage did you recieve?");
+        string percentFromUser = Console.ReadLine() ;
+        string letterGrade = "";
         string letter = "";
+        int grade = int.Parse(percentFromUser);
+        float final =  grade%10;
+        
 
         if (grade >= 90)
         {
-             
-             letter = "A";
-             Console.WriteLine($"You got a {letter}");
-             
-             
-        }
-        else if (grade >= 80)
-        {
-            
-            letter = "B";
-            Console.WriteLine($"You got a {letter}");
+            letterGrade = "A";
             
         }
-        else if (grade >= 70)
+        else if (grade >=80)
         {
-            
-            letter = "C";
-            Console.WriteLine($"You got a {letter}");
-            
-
+            letterGrade = "B";
         }
-        else if (grade >= 60)
+        else if (grade >=70)
         {
-        
-        letter = "D";
-        Console.WriteLine($"You got a {letter}");
-        
-
+            letterGrade = "C";
+        }
+        else if (grade >=60)
+        {
+            letterGrade = "D";
         }
         else 
         {
-           
-           letter = "F";
-           Console.WriteLine($"You got a {letter}");
-            
-
+            letterGrade = "F";
         }
+         
+///////////////////////////////////////////////////////////////////////////////
+
+        if (final >= 7)
+        {
+            letter = "+";
+        }
+
+        else if (final >= 3)
+        {
+            letter = "";
+        }
+
+        else
+        {
+            letter = "-";
+        }
+
+////////////////////////////////////////////////////////////////////////////////////////
+
+        if (grade >= 97)
+        {
+           Console.WriteLine($"Your grade is {letterGrade}");
+        }
+
+        else if (grade<= 59)
+        {
+            Console.WriteLine($"Your grade is {letterGrade}");
+        }
+
+        else
+        {
+            Console.WriteLine($"Your grade is {letterGrade}{letter}.");
+        }
+
+        //Console.WriteLine($"Your grade is {letterGrade}{letter}.");
+        
+
 
         if (grade >= 70)
         {
-            Console.Write("Congradulations you have recieved a passing score!");
+            Console.WriteLine($"Congradulations you have passed!");
         }
-
-        else 
+        else
         {
-            Console.Write("We are sorry to inform you that you did not recieve a passing grade. Better luck next year.");
+            Console.WriteLine($"Sorry you did not pass");
         }
         
+        
+
+        
+       
     }
 }

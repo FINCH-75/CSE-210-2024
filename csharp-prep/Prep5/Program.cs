@@ -16,7 +16,7 @@ class Program
 
     }
 
-        static void DisplayMessage()
+    static void DisplayMessage()
     {
     Console.WriteLine("Welcome to the Program!");
     }
